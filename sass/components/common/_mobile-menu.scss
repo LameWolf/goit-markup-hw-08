@@ -89,6 +89,9 @@
 }
 
 .mobile-address__list {
+  position: absolute;
+  left: 40px;
+  bottom: 134px;
   font-style: normal;
   font-weight: 500;
   font-size: 34px;
@@ -117,6 +120,9 @@
 }
 
 .mobile-social {
+  position: absolute;
+  left: 40px;
+  bottom: 48px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;

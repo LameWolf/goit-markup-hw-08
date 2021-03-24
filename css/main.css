@@ -41,8 +41,7 @@ textarea {
 }
 
 .container {
-  max-width: 480px;
-  min-width: 320px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -51,13 +50,13 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -286,6 +285,12 @@ textarea {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo--mobile {
+    text-align: start;
+  }
+}
+
 .logo__subtext {
   color: #000000;
 }
@@ -353,6 +358,14 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .contacts__item {
@@ -728,6 +741,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -1226,6 +1240,9 @@ textarea {
 }
 
 .mobile-address__list {
+  position: absolute;
+  left: 40px;
+  bottom: 134px;
   font-style: normal;
   font-weight: 500;
   font-size: 34px;
@@ -1252,6 +1269,9 @@ textarea {
 }
 
 .mobile-social {
+  position: absolute;
+  left: 40px;
+  bottom: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1624,14 +1644,22 @@ textarea {
   background-color: #ffffff;
 }
 
+.portfolio {
+  padding: 60px 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0px;
+  }
+}
+
 .portfolio__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 60px;
-  padding-left: 15px;
   margin-bottom: 40px;
 }
 
@@ -1646,7 +1674,6 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .portfolio__list {
-    padding-top: 94px;
     margin-bottom: 50px;
   }
 }
@@ -1685,8 +1712,8 @@ textarea {
 }
 
 .product__list {
-  padding-bottom: 94px;
   margin-right: -30px;
+  margin-bottom: -30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1700,7 +1727,6 @@ textarea {
 }
 
 .product__item {
-  border: 1px solid #eeeeee;
   margin: 0 30px 30px 0;
 }
 
@@ -1726,6 +1752,12 @@ textarea {
 .product__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.product__thumb img {
+  height: 294px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product__card:hover .product__overlay {
@@ -1755,11 +1787,24 @@ textarea {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: #ffffff;
-  padding: 63px 24px;
+  padding: 77px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .product__descr {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product__descr {
+    padding: 63px 24px;
+  }
 }
 
 .product__content {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .product__title {
