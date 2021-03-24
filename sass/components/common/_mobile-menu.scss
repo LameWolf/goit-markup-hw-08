@@ -1,0 +1,142 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $white-text;
+  transform: translateX(100%);
+  transition: transform $animation-dur $animation-type;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  fill: $black-text;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: $accent-color;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+}
+
+.mobile-menu {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu__item {
+  &:not(:first-child) {
+    padding-top: 32px;
+  }
+}
+
+.mobile-menu__link {
+  display: block;
+
+  color: $black-text;
+  text-decoration: none;
+  transition: color $animation-dur $animation-type;
+}
+
+.mobile-menu__link--color {
+  color: $black-text;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-menu__link--current {
+  color: $accent-color;
+}
+
+.mobile-address__list {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-top: 306px;
+}
+
+.mobile-address__item {
+  &:not(:first-child) {
+    padding-top: 32px;
+  }
+
+  &:nth-child(2) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+.mobile-address__link {
+  color: $accent-color;
+}
+
+.mobile-address__link--color {
+  color: $grey-text;
+}
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.mobile-social__item:nth-child(-n + 3)::after {
+  content: ' ';
+  width: 22px;
+  height: 0px;
+  margin: 0 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-social__link {
+  color: $accent-color;
+}
