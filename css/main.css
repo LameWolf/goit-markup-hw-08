@@ -48,6 +48,12 @@ textarea {
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -1749,6 +1755,18 @@ textarea {
   }
 }
 
+.product__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  outline: 1px solid red;
+}
+
 .product__thumb {
   position: relative;
   overflow: hidden;
@@ -1805,6 +1823,9 @@ textarea {
 .product__content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .product__title {

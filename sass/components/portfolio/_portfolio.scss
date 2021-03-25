@@ -89,6 +89,13 @@
   }
 }
 
+.product__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  outline: 1px solid red;
+}
+
 .product__thumb {
   position: relative;
   overflow: hidden;
@@ -137,6 +144,7 @@
 .product__content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .product__title {
